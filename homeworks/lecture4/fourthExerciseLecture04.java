@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.lecture4;
 import java.util.Scanner;
 public class fourthExerciseLecture04 {
     public static void main(String[] args) {
