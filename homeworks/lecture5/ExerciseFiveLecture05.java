@@ -1,7 +1,7 @@
 package homeworks.lecture5;
 
 import java.util.*;
-public class fifthExerciseLecture05 {
+public class ExerciseFiveLecture05 {
 
     public static void main(String[] args) {
         reverseOrderOfLinkedList();

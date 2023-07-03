@@ -1,7 +1,7 @@
 package homeworks.lecture4;
 import java.util.Scanner;
 
-public class secondExerciseLecture04 {
+public class ExerciseTwoLecture04 {
     public static void main(String[] args) {
         exerciseTwoDaysOfWeek();
     }

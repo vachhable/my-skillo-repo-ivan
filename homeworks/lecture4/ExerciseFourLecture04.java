@@ -1,6 +1,6 @@
 package homeworks.lecture4;
 import java.util.Scanner;
-public class fourthExerciseLecture04 {
+public class ExerciseFourLecture04 {
     public static void main(String[] args) {
         fourthExerciseCalculateRevenue();
     }

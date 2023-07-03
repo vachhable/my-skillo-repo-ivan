@@ -1,8 +1,7 @@
 package homeworks.lecture5;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
-public class thirdExerciseLecture05 {
+public class ExerciseThreeLecture05 {
     public static void main(String[] args) {
         printElementsOfGiven2DMatrixWithDynamicRowsAndColumns();
     }

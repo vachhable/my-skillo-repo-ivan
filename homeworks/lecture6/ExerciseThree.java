@@ -4,10 +4,8 @@ public class ExerciseThree {
     public static void main(String[] args) {
         String str = "Testing out some of things";
 
-        // Displaying the middle character(s) of the string
         displayMiddleCharacter(str);
 
-        // Counting the number of words in the string
         int wordCount = countWords(str);
         System.out.println("Number of words: " + wordCount);
     }
@@ -24,7 +22,6 @@ public class ExerciseThree {
         }
     }
 
-    // Method to count all words in a string
     public static int countWords(String str) {
         String[] words = str.split("\\s+");
 

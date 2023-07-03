@@ -1,6 +1,6 @@
 package homeworks.lecture5;
 
-public class firstExerciseLecture05 {
+public class ExerciseOneLecture05 {
     public static void main(String[] args) {
         calculateSumOfArrayElements();
     }

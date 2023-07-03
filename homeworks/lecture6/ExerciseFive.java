@@ -13,7 +13,7 @@ public class ExerciseFive {
 
     public static boolean isPalindrome(int number) {
         if (number < 0) {
-            return false; // Negative numbers are not palindromes
+            return false;
         }
 
         int originalNumber = number;
@@ -27,5 +27,4 @@ public class ExerciseFive {
 
         return originalNumber == reverse;
     }
-}
 }

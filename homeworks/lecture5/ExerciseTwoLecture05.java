@@ -1,6 +1,6 @@
 package homeworks.lecture5;
 
-public class secondExerciseLecture05 {
+public class ExerciseTwoLecture05 {
     public static void main(String[] args) {
         printElementsIn2DMatrixWith4Rows3Columns();
 

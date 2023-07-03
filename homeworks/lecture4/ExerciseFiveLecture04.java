@@ -1,13 +1,11 @@
-package homeworks.lecture5;
+package homeworks.lecture4;
 
-public class fourthExerciseLecture05 {
-
+public class ExerciseFiveLecture04 {
     public static void main(String[] args) {
-        findBiggestElementOfAnArray();
+        fifthExerciseFindLargestNumberFromArray();
     }
-
-    public static void findBiggestElementOfAnArray(){
-        int[] arr ={2,11,45,9,100,30,24,39,60};
+    public static void fifthExerciseFindLargestNumberFromArray(){
+        int[] arr ={2,11,45,9};
         int highest = arr[0];
         for (int i = 0; i < arr.length; i++){
             if(arr[i] > highest)
@@ -16,5 +14,4 @@ public class fourthExerciseLecture05 {
         System.out.println("Largest number from the array is: " + highest);
 
     }
-
-    }
+}
