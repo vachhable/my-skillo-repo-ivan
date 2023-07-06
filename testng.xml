@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Math Operations Suite" parallel="methods" thread-count="5">
+
+    <test name="Math Operations Tests">
+        <groups>
+            <run>
+                <include name="addition" />
+                <include name="subtraction" />
+                <include name="multiplication" />
+                <include name="division" />
+                <include name="modulus" />
+            </run>
+        </groups>
+        <classes>
+            <class name="homeworks.lecture10.MathOperationsTest" />
+        </classes>
+    </test>
+</suite>
