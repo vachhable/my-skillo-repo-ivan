@@ -41,12 +41,12 @@ public class HomeworkLecture14 {
 
     @DataProvider(name = "getUsers")
     public Object [][] getUsers() {
-        return new Object[][]{{"ivanp@abv.bg", "IvanPenchev123", "IvanPenchev1"}
+        return new Object[][]{{"ivanp2@abv.bg", "IvanPenchev123", "IvanPenchev2", "IvanPenchevModified", "ivanpenchevmodified@abv.bg", "passwordIsModified"}
 
         };
     }
     @Test (dataProvider = "getUsers")
-    public void testProfileEdit (String email, String password, String username){
+    public void testProfileEdit (String email, String password, String username, String modifiedUsername, String modifiedEmail, String modifiedPassword){
         driver.get("http://training.skillo-bg.com:4300/posts/all");
         WebElement loginLink = driver.findElement(By.id("nav-link-login"));
         loginLink.click();
@@ -73,23 +73,24 @@ public class HomeworkLecture14 {
 
         Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), username));
         Assert.assertTrue(isTextDisplayed, "The username is not displayed!");
-        WebElement userEditButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".fas.fa-user-edit")));
+        WebElement userEditButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".fa-user-edit")));
         userEditButton.click();
+
 
         Boolean isModifyTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h4"), "Modify Your Profile"));
         Assert.assertTrue(isModifyTextDisplayed, "The modify profile modal is not displayed!");
 
-        String modifiedUsername = "IvanPenchevModified";
+
         WebElement userNameEditField = driver.findElement(By.cssSelector("[formcontrolname='username']"));
         userNameEditField.clear();
         userNameEditField.sendKeys(modifiedUsername);
 
-        String modifiedEmail = "ivanpenchevmodified@abv.bg";
+
         WebElement emailEditField = driver.findElement(By.cssSelector("[formcontrolname='email']"));
         emailEditField.clear();
         emailEditField.sendKeys(modifiedEmail);
 
-        String modifiedPassword = "passwordIsModified";
+
         WebElement passwordEditField = driver.findElement(By.cssSelector("[formcontrolname='password']"));
         passwordEditField.sendKeys(modifiedPassword);
 
@@ -103,7 +104,7 @@ public class HomeworkLecture14 {
         WebElement saveEditProfile = driver.findElement(By.cssSelector("[type='submit']"));
         saveEditProfile.click();
 
-        Boolean isNewProfileUsernameDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), "IvanPenchevModified"));
+        Boolean isNewProfileUsernameDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), modifiedUsername));
         Assert.assertTrue(isNewProfileUsernameDisplayed, "The username was not modified!");
 
         //Logout
@@ -125,6 +126,25 @@ public class HomeworkLecture14 {
 
         Boolean isModifiedTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), modifiedUsername));
         Assert.assertTrue(isModifiedTextDisplayed, "The modified username is not displayed!");
+
+        userEditButton.click();
+
+        Assert.assertTrue(isModifyTextDisplayed, "The modify profile modal is not displayed!");
+
+        userNameEditField.clear();
+        userNameEditField.sendKeys(username);
+
+        emailEditField.clear();
+        emailEditField.sendKeys(email);
+
+        passwordEditField.sendKeys(password);
+
+        confirmPasswordEditField.sendKeys(password);
+
+        publicInfoEditField.clear();
+        publicInfoEditField.sendKeys("This is my previous public info");
+
+        saveEditProfile.click();
 
     }
 }
