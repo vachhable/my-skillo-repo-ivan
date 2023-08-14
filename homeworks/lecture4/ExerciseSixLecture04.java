@@ -1,6 +1,6 @@
 package homeworks.lecture4;
 import java.util.Scanner;
-public class sixthExerciseLecture04 {
+public class ExerciseSixLecture04 {
     public static void main(String[] args) {
         exerciseWhereShouldYouVacate();
     }

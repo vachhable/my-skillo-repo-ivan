@@ -1,6 +1,6 @@
 package homeworks.lecture4;
 
-public class eightExerciseLecture04 {
+public class ExerciseEightLecture04 {
     public static void main(String[] args) {
         exerciseReverseList();
     }

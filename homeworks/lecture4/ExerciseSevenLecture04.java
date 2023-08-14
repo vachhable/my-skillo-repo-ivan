@@ -1,6 +1,6 @@
 package homeworks.lecture4;
 
-public class seventhExerciseLecture04 {
+public class ExerciseSevenLecture04 {
     public static void main(String[] args) {
         exerciseDisplayNumbersDivisibleByFive();
     }

@@ -2,7 +2,7 @@ package homeworks.lecture4;
 
 import java.util.Scanner;
 
-class firstExerciseLecture04 {
+class ExerciseOneLecture04 {
 
     public static void main(String[] args) {
         exerciseOneTriangle();
